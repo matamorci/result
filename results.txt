@@ -7,86 +7,14 @@ WARNING: The return values reported here may be bugged on some systems.
           the function output--only the reported return value.
 
 
-Test   7 (pct_5w) : FAILED.
-    First line of code: {return test("%5%");}
-      expected return value : 5
-      your return value     : 1
-      expected output : "    %"
-      your output     : "%"
-      expected (nonprintable as hex) : "    %"
-      actual   (nonprintable as hex) : "%"
-
-Test   8 (pct_5wlj) : FAILED.
-    First line of code: {return test("%-5%");}
-      expected return value : 5
-      your return value     : 1
-      expected output : "%    "
-      your output     : "%"
-      expected (nonprintable as hex) : "%    "
-      actual   (nonprintable as hex) : "%"
-
-Test   9 (pct_5wzp) : FAILED.
-    First line of code: {return test("%05%");}
-      expected return value : 5
-      your return value     : 1
-      expected output : "0000%"
-      your output     : "%"
-      expected (nonprintable as hex) : "0000%"
-      actual   (nonprintable as hex) : "%"
-
 Test  10 (pct_5wljzp) : FAILED.
     First line of code: {return test("%-05%");}
       expected return value : 5
-      your return value     : 1
+      your return value     : 5
       expected output : "%    "
-      your output     : "%"
+      your output     : "%0000"
       expected (nonprintable as hex) : "%    "
-      actual   (nonprintable as hex) : "%"
-
-Test  79 (s_prec_03_no_width_s_null) : FAILED.
-    First line of code: {return test("%.03s", NULL);}
-      expected return value : 3
-      your return value     : 0
-      expected output : "(nu"
-      your output     : ""
-      expected (nonprintable as hex) : "(nu"
-      actual   (nonprintable as hex) : ""
-
-Test 101 (s_prec_1_width_3_s_null) : FAILED.
-    First line of code: {return test("%3.1s", NULL);}
-      expected return value : 3
-      your return value     : 3
-      expected output : "  ("
-      your output     : "   "
-      expected (nonprintable as hex) : "  ("
-      actual   (nonprintable as hex) : "   "
-
-Test 102 (s_prec_1_width_9_s_null) : FAILED.
-    First line of code: {return test("%9.1s", NULL);}
-      expected return value : 9
-      your return value     : 9
-      expected output : "        ("
-      your output     : "         "
-      expected (nonprintable as hex) : "        ("
-      actual   (nonprintable as hex) : "         "
-
-Test 105 (s_prec_1_lj_width_3_s_null) : FAILED.
-    First line of code: {return test("%-3.1s", NULL);}
-      expected return value : 3
-      your return value     : 3
-      expected output : "(  "
-      your output     : "   "
-      expected (nonprintable as hex) : "(  "
-      actual   (nonprintable as hex) : "   "
-
-Test 106 (s_prec_1_lj_width_9_s_null) : FAILED.
-    First line of code: {return test("%-9.1s", NULL);}
-      expected return value : 9
-      your return value     : 9
-      expected output : "(        "
-      your output     : "         "
-      expected (nonprintable as hex) : "(        "
-      actual   (nonprintable as hex) : "         "
+      actual   (nonprintable as hex) : "%0000"
 
 Test 426 (p_null) : FAILED.
     First line of code: {return test("%p", NULL);}
